@@ -8,9 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 
-#define SFT_ENT &mt RSHIFT ENTER
-
-
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -22,10 +19,10 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
 //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
-	&kp ESC   &kp Z     &kp R     &kp L     &kp D     &kp W                                               &kp Y     &kp P     &kp U     &kp X     &kp Q     &kp BSLH
-	&kp TAB   &kp H     &kp N     &kp T     &kp S     &kp C                                               &kp B     &kp I     &kp E     &kp O     &kp A     &kp SQT
-	&kp LSHFT &kp K     &kp V     &kp M     &kp F     &kp G     &kp LSHFT &kp LSHFT   &kp LSHFT &kp LSHFT &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
-	                              &kp CTRL  &kp LALT  &kp LGUI  &kp SPACE &kp BSPC     SFT_ENT  &kp ENT   &kp TAB   &kp BSPC  &kp RALT
+	&kp ESC   &kp Z     &kp R     &kp L     &kp D     &kp W                                                           &kp Y     &kp P     &kp U     &kp X     &kp Q     &kp BSLH
+	&kp TAB   &kp H     &kp N     &kp T     &kp S     &kp C                                                           &kp B     &kp I     &kp E     &kp O     &kp A     &kp SQT
+	&kp LSHFT &kp K     &kp V     &kp M     &kp F     &kp G     &kp LSHFT &kp LSHFT        &kp LSHFT        &kp LSHFT &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
+	                              &kp CTRL  &kp LALT  &kp LGUI  &kp SPACE &mt BSPC LGUI    &mt RSHIFT ENTER &kp ENT   &kp TAB   &kp BSPC  &kp RALT
 			>;
 		};
 	};
