@@ -1,28 +1,30 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
+  * Copyright (c) 2020 The ZMK Contributors
+  *
+  * SPDX-License-Identifier: MIT
+  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
+ #include <behaviors.dtsi>
+ #include <dt-bindings/zmk/keys.h>
 
+ / {
+ 	keymap {
+ 		compatible = "zmk,keymap";
 
-/ {
-	keymap {
-		compatible = "zmk,keymap";
+ 		default_layer {
+ // ---------------------------------------------------------------------------------------------------------------------------------
+ // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
+ // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
+ // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
+ //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
+ 			bindings = <
+ 	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
+ 	&kp TAB   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+ 	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+ 	                 &kp LGUI &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
+ 			>;
 
-		default_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-//                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
-			bindings = <
-	&kp ESC   &kp Z     &kp R     &kp L     &kp D     &kp W                                                           &kp Y     &kp P     &kp U     &kp X     &kp Q     &kp BSLH
-	&kp TAB   &kp H     &kp N     &kp T     &kp S     &kp C                                                           &kp B     &kp I     &kp E     &kp O     &kp A     &kp SQT
-	&kp LSHFT &kp K     &kp V     &kp M     &kp F     &kp G     &kp LSHFT &kp LSHFT        &kp LSHFT        &kp LSHFT &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
-	                              &kp CTRL  &kp LALT  &kp LGUI  &kp SPACE &mt BSPC LGUI    &mt RSHIFT ENTER &kp ENT   &kp TAB   &kp BSPC  &kp RALT
-			>;
-		};
-	};
+ 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+ 		};
+ 	};
+ };
