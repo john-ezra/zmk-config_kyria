@@ -18,10 +18,10 @@
  // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
  //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
  			bindings = <
- 	&mt LG(A) LG(F) &kp Z &kp R &kp L &kp D &kp W                                                &kp Y &kp P     &kp U     &kp X   &kp Q    &kp BSLH
- 	&mt LG(C) LG(V) &kp H &kp N &kp T &kp S &kp C                                                &kp B &kp I     &kp E     &kp O   &kp A    &kp GRAVE
- 	&mt LG(Z) LG(Y) &kp K &kp V &kp M &kp F &kp G  &kp LSHFT  &kp LSHFT      &kp LSHFT &kp LSHFT &kp J &kp SEMI  &kp COMMA &kp DOT &kp FSLH &kp SQT
- 	                      &kp LGUI &kp DEL &kp RET &kp SPACE  &mt LGUI BSPC  &mt LSHFT ENTER  &kp SPACE  &kp TAB &kp BSPC &kp RALT
+ 	&mt LG(A) LG(F) &kp Z &kp R  &kp L    &kp D           &kp W                                                              &kp Y   &kp P    &kp U     &kp X   &kp Q    &kp BSLH
+ 	&mt LG(C) LG(V) &kp H &kp N  &kp T    &kp S           &kp C                                                              &kp B   &kp I    &kp E     &kp O   &kp A    &kp GRAVE
+ 	&mt LG(Z) LG(Y) &kp K &kp V  &kp M    &kp F           &kp G   &mt LALT ESC &mt LCTL LC(UP)  &mt LALT ESC &mt LCTL LC(UP) &kp J   &kp SEMI &kp COMMA &kp DOT &kp FSLH &kp SQT
+ 	                             &kp LGUI &mt LSHFT ENTER &kp RET &kp SPACE    &mt LGUI BSPC    &mt LGUI TAB &mt LSHFT ENTER &kp TAB &kp DEL  &kp CAPS
  			>;
  		};
  	};
