@@ -7,6 +7,8 @@
  #include <behaviors.dtsi>
  #include <dt-bindings/zmk/keys.h>
 
+ #define SFT_ENT &mt RSHIFT ENT
+
  / {
  	keymap {
  		compatible = "zmk,keymap";
@@ -21,7 +23,7 @@
  	&mt LG(A) LG(F) &kp Z &kp R  &kp L    &kp D           &kp W                                                              &kp Y   &kp P    &kp U     &kp X   &kp Q    &kp BSLH
  	&mt LG(C) LG(V) &kp H &kp N  &kp T    &kp S           &kp C                                                              &kp B   &kp I    &kp E     &kp O   &kp A    &kp GRAVE
  	&mt LG(Z) LG(Y) &kp K &kp V  &kp M    &kp F           &kp G   &mt LALT ESC &mt LCTL LC(UP)  &mt LALT ESC &mt LCTL LC(UP) &kp J   &kp SEMI &kp COMMA &kp DOT &kp FSLH &kp SQT
- 	                             &kp LGUI &mt LSHFT ENTER &kp RET &kp SPACE    &mt LGUI BSPC    &mt LGUI TAB &mt LSHFT ENTER &kp TAB &kp DEL  &kp CAPS
+ 	                             &kp LGUI &mt LSHFT ENTER &kp RET &kp SPACE    &mt LGUI BSPC    &mt LGUI TAB SFT_ENT &kp TAB &kp DEL  &kp CAPS
  			>;
  		};
  	};
