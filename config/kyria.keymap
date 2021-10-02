@@ -32,9 +32,9 @@
  	    };
   lower_layer {
  	bindings = <
- 	_________ &kp Z     &kp R      &kp L     &kp D     &kp W                                             &kp Y     &kp P     &kp U     &kp X     &kp Q     &kp BSLH
- 	_________ &kp H     &kp N      &kp T     &kp S     &kp C                                             &kp B     &kp I     &kp E     &kp O     &kp A     &kp GRAVE
- 	_________ &kp K     &kp V      &kp M     &kp F     &kp G     _________ _________ _________ _________ &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
+ 	&kp TAB   &kp ASTRK &kp SLASH  &kp PLUS  &kp MINUS &kp EQUAL                                         &kp Y     &kp P     &kp U     &kp X     &kp Q     &kp BSLH
+ 	&kp ENTER &kp LEFT  &kp UP     &kp DOWN  &kp RIGHT _________                                         &kp B     &kp I     &kp E     &kp O     &kp A     &kp GRAVE
+ 	&kp ESC   C_VOL_DN  C_VOL_UP   C_PREV    C_PP      C_NEXT    _________ _________ _________ _________ &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
  	                               _________ _________ _________ _________ _________ _________ _________ _________ _________ _________
  			>;
  	    };
