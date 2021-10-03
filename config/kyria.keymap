@@ -10,7 +10,6 @@
 
  #define FIND &mt LG(A) LG(F)
  #define COPY &mt LG(C) LG(V)
- #define UNDO &mt LG(Z) LG(Y)
  #define MSS_CTL &mt LCTL LC(UP)
  #define BSP_CMD &mt LGUI BSPC
  #define TAB_CMD &mt LGUI TAB
@@ -53,7 +52,14 @@
          bindings = <&kp H>, <&kp LEFT>;
          mods = <MOD_LCTL>;
       };
+     undo: undo_redo {
+        compatible = "zmk,behavior-mod-morph";
+        label = "UNDO_REDO";
+        #binding-cells = <0>;
+        bindings = <&kp LG(Z)>, <&kp Y>;
+        mods = <MOD_LGUI>;
      };
+  };
 
 
 
@@ -64,7 +70,7 @@
  	bindings = <
  	FIND      &kp Z     &kp R     &kp L     &kp D     &kp W                                             &kp Y     &kp P     &kp U     &kp X     &kp Q     &kp BSLH
  	COPY      &h_left   &n_up     &t_down   &s_right  &kp C                                             &kp B     &kp I     &kp E     &kp O     &kp A     &kp GRAVE
- 	UNDO      &kp K     &kp V     &kp M     &kp F     &kp G     ALT_ESC   MSS_CTL   MSS_CTL   ALT_ESC   &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
+ 	&undo      &kp K     &kp V     &kp M     &kp F     &kp G     ALT_ESC   MSS_CTL   MSS_CTL   ALT_ESC   &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
  	                              &kp LGUI  SFT_ENT   LOWER     &kp SPACE BSP_CMD   TAB_CMD   SFT_ENT   RAISE     &kp DEL   &kp CAPS
  			>;
  	    };
