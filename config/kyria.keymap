@@ -23,13 +23,26 @@
 
 
  / {
+
+ behaviors {
+     sright: s_right {
+         compatible = "zmk,behavior-mod-morph";
+         label = "S_RIGHT";
+         #binding-cells = <0>;
+         bindings = <&kp S>, <&kp RIGHT>;
+         mods = <LCTL>;
+         };
+     };
+
+
+
  	keymap {
  		compatible = "zmk,keymap";
 
   default_layer {
  	bindings = <
  	FIND      &kp Z     &kp R     &kp L     &kp D     &kp W                                             &kp Y     &kp P     &kp U     &kp X     &kp Q     &kp BSLH
- 	COPY      &kp H     &kp N     &kp T     &kp S     &kp C                                             &kp B     &kp I     &kp E     &kp O     &kp A     &kp GRAVE
+ 	COPY      &kp H     &kp N     &kp T     &sright   &kp C                                             &kp B     &kp I     &kp E     &kp O     &kp A     &kp GRAVE
  	UNDO      &kp K     &kp V     &kp M     &kp F     &kp G     ALT_ESC   MSS_CTL   MSS_CTL   ALT_ESC   &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
  	                              &kp LGUI  SFT_ENT   LOWER     &kp SPACE BSP_CMD   TAB_CMD   SFT_ENT   RAISE     &kp DEL   &kp CAPS
  			>;
