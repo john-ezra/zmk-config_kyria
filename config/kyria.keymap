@@ -30,21 +30,21 @@
          #binding-cells = <0>;
          bindings = <&kp S>, <&kp RIGHT>;
          mods = <MOD_LCTL>;
-         };
+      };
      t_down: t_down {
          compatible = "zmk,behavior-mod-morph";
          label = "T_DOWN";
          #binding-cells = <0>;
          bindings = <&kp T>, <&kp DOWN>;
          mods = <MOD_LCTL>;
-         };
+      };
      n_up: n_up {
          compatible = "zmk,behavior-mod-morph";
          label = "N_UP";
          #binding-cells = <0>;
          bindings = <&kp N>, <&kp UP>;
          mods = <MOD_LCTL>;
-         };
+      };
      h_left: h_left {
          compatible = "zmk,behavior-mod-morph";
          label = "H_LEFT";
@@ -58,6 +58,13 @@
         #binding-cells = <0>;
         bindings = <&kp LG(Z)>, <&kp Y>;
         mods = <MOD_LGUI>;
+      };
+     ccp: copy_cut_paste {
+        compatible = "zmk,behavior-mod-morph";
+        label = "COPY_CUT_PASTE";
+        #binding-cells = <0>;
+        bindings = <COPY>, <&kp X>;
+        mods = <MOD_LGUI>;
      };
   };
 
@@ -69,8 +76,8 @@
   default_layer {
  	bindings = <
  	FIND      &kp Z     &kp R     &kp L     &kp D     &kp W                                             &kp Y     &kp P     &kp U     &kp X     &kp Q     &kp BSLH
- 	COPY      &h_left   &n_up     &t_down   &s_right  &kp C                                             &kp B     &kp I     &kp E     &kp O     &kp A     &kp GRAVE
- 	&undo      &kp K     &kp V     &kp M     &kp F     &kp G     ALT_ESC   MSS_CTL   MSS_CTL   ALT_ESC   &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
+ 	&ccp      &h_left   &n_up     &t_down   &s_right  &kp C                                             &kp B     &kp I     &kp E     &kp O     &kp A     &kp GRAVE
+ 	&undo     &kp K     &kp V     &kp M     &kp F     &kp G     ALT_ESC   MSS_CTL   MSS_CTL   ALT_ESC   &kp J     &kp SEMI  &kp COMMA &kp DOT   &kp FSLH  &kp SQT
  	                              &kp LGUI  SFT_ENT   LOWER     &kp SPACE BSP_CMD   TAB_CMD   SFT_ENT   RAISE     &kp DEL   &kp CAPS
  			>;
  	    };
