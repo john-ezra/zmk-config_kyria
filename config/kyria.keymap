@@ -23,6 +23,10 @@
  #define ALT_ESC &mt LALT ESC
  #define _________ &trans
 
+ &mt {
+    quick_tap_ms = <200>;
+ };
+
 
  / {
 
